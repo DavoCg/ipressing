@@ -5,6 +5,11 @@ var babelify = require('babelify');
 var source   = require('vinyl-source-stream');
 var watch = require('gulp-watch');
 
+var minifyCss = require('gulp-minify-css');
+var uglify = require('gulp-uglify');
+var imagemin = require('gulp-imagemin');
+var gzip = require('gulp-gzip');
+
 var externals = [
     'classnames',
     'lodash',
@@ -50,12 +55,14 @@ gulp.task('html', function(){
 gulp.task('images', function(){
     gulp
         .src('./src/images/*')
+        .pipe(imagemin())
         .pipe(gulp.dest('./dist/images'))
 });
 
 gulp.task('css', function(){
     gulp
         .src('./src/css/*.css')
+        .pipe(minifyCss())
         .pipe(gulp.dest('./dist/css'))
 });
 
