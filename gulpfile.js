@@ -34,7 +34,6 @@ gulp.task('vendors', function(){
         .bundle()
         .pipe(source('vendors.js'))
         .pipe(streamify(uglify()))
-        .pipe(gzip())
         .pipe(gulp.dest('./dist/js'));
 
 });
@@ -46,7 +45,6 @@ gulp.task('bundle', function(){
         .bundle()
         .pipe(source('bundle.js'))
         .pipe(streamify(uglify()))
-        .pipe(gzip())
         .pipe(gulp.dest('./dist/js'));
 });
 
