@@ -1,0 +1,94 @@
+@font-face {
+    font-family: sourceSansProRegular;
+    src: url(../fonts/sourceSansProRegular.otf);
+}
+
+@font-face {
+    font-family: sourceSansProBold;
+    src: url(../fonts/sourceSansProBold.otf);
+}
+
+@font-face {
+    font-family: castle;
+    src: url(../fonts/castle.ttf);
+}
+
+@font-face {
+    font-family: sourceSansProLight;
+    src: url(../fonts/sourceSansProLight.otf);
+}
+
+body{
+    background-color: #ecf0f1;
+    padding: 0;
+    margin: 0;
+    font-family: sourceSansProRegular;
+}
+
+.button:active{
+    box-shadow: 0 1px 3px rgba(0,0,0,0.03), 0 1px 2px rgba(0,0,0,0.06);
+}
+
+.hover-pointer:hover{
+    cursor: pointer;
+}
+
+.button:hover{
+    cursor: pointer;
+}
+
+.image-filter{
+    -webkit-filter: grayscale(60%);
+}
+
+.nav-item:hover{
+    cursor: pointer;
+
+}
+
+.nav-item-bordered:hover{
+    background-color: rgba(0, 0, 0, 0.3);
+    border: solid 1px #EFEFEF;
+    color: #EFEFEF;
+}
+
+.react-tabs{
+    color: #565A5C;
+}
+
+.react-tabs [role=tab][aria-selected=true] {
+    border-color: rgba(170, 170, 170, 0.78);
+    background-color: #ecf0f1;
+}
+
+.react-tabs [role=tablist] {
+    border-bottom: rgba(170, 170, 170, 0.48) 1px solid;
+}
+
+
+.wrap-burger {
+    width: 28px;
+    border-radius: 3px;
+    padding: 4px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    margin-top: 10px;
+    float: right;
+}
+
+.burgx, .burgx2, .burgx3 {
+    background: white;
+    width: 96%;
+    margin-left: 2%;
+    margin-bottom: 6px;
+    height: 3px;
+}
+
+.burgx3 {
+    margin-bottom: 0;
+}
+
+.list-pricing-item:hover{
+    border: solid 1px rgba(170, 170, 170, 0.7) !important;
+    transform: scale(1.005) !important;
+}
