@@ -9,6 +9,7 @@ var minifyCss = require('gulp-minify-css');
 var uglify = require('gulp-uglify');
 var imagemin = require('gulp-imagemin');
 var gzip = require('gulp-gzip');
+var streamify = require('gulp-streamify');
 
 var externals = [
     'classnames',
@@ -32,6 +33,8 @@ gulp.task('vendors', function(){
         .transform(babelify.configure({sourceMap: false}))
         .bundle()
         .pipe(source('vendors.js'))
+        .pipe(streamify(uglify()))
+        .pipe(gzip())
         .pipe(gulp.dest('./dist/js'));
 
 });
@@ -42,6 +45,8 @@ gulp.task('bundle', function(){
         .transform(babelify.configure({sourceMap: false}))
         .bundle()
         .pipe(source('bundle.js'))
+        .pipe(streamify(uglify()))
+        .pipe(gzip())
         .pipe(gulp.dest('./dist/js'));
 });
 
