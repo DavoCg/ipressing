@@ -9,8 +9,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "JSONStream": "^1.0.4",
-    "adotcomponents": "^2.12.1",
     "babelify": "^6.1.2",
     "body-parser": "^1.13.1",
     "browserify": "^10.2.4",
